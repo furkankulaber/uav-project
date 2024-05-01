@@ -2,6 +2,8 @@ version: '3'
 
 services:
   web:
+    container_name: web
+    hostname: web
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -11,7 +13,9 @@ services:
       - db
     networks:
       - uavrental_network
-  db:
+  postgres:
+    container_name: postgres
+    hostname: postgres
     image: postgres
     environment:
       POSTGRES_DB: uavrental_db
