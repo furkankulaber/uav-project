@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, serializers
 from rest_framework.response import Response
 from rest_framework import status
 from django.db.models import Q
@@ -8,7 +8,7 @@ from datetime import datetime
 from rest_framework import filters
 from rest_framework.decorators import action
 
-from core.models import Drone
+from core.models import Drone, Brand, Category
 from core.serializers import DroneSerializer
 from core.filters import CustomPagination
 

@@ -9,17 +9,17 @@ WORKDIR /app
 # Copy the required dependencies
 COPY requirements.txt .
 
-RUN apt install gdal-bin
-
 # Install the dependencies
 RUN pip install -r requirements.txt
-
-RUN python manage.py makemigrations
-RUN python manage.py migrate
-RUN python manage.py loaddata data.json
 
 # Copy the project files
 COPY . .
 
-# Run the Django application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Copy entry script
+COPY ./docker/entrypoint.sh .
+
+# Make entrypoint.sh executable
+RUN chmod +x entrypoint.sh
+
+# Define entrypoint
+ENTRYPOINT ["./entrypoint.sh"]

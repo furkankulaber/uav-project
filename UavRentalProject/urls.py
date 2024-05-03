@@ -21,7 +21,7 @@ from rest_framework import routers
 from rest_framework.permissions import AllowAny
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from core.views import DroneViewSet,BookingViewSet, UserInfoView
+from core.views import DroneViewSet,BookingViewSet, UserInfoView, CategoryViewSet, BrandViewSet
 
 router = routers.DefaultRouter()
 
@@ -38,6 +38,8 @@ schema_view = get_schema_view(
 
 router.register(r'api/drones', DroneViewSet, basename='drone')
 router.register(r'api/bookings', BookingViewSet, basename='booking')
+router.register(r'api/category', CategoryViewSet, basename='category')
+router.register(r'api/brands', BrandViewSet, basename='brand')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -46,6 +48,6 @@ urlpatterns = [
     path('', include(router.urls)),  # Burası değişti
     path('api/user-info/', UserInfoView.as_view(), name='user-info'),
     path('api/drones/available_drones/', DroneViewSet.as_view({'get': 'available_drones'}), name='available-drones'),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('api/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'uavrental_db',
         'USER': 'postgres',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': '172.17.0.1',
         'PORT': '5432',
     }
 }
@@ -187,6 +187,8 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 CORS_ALLOWED_ORIGINS = [
-    'http://34.107.108.218:3000',
-    'http://127.0.0.1:3000'
+    'http://34.107.108.218:5173',
+    'http://0.0.0.0:3000',
+    'http://127.0.0.1:3000',
+    'http://34.107.108.218:5173'
 ]

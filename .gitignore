@@ -62,3 +62,4 @@ pip-delete-this-directory.txt
 .idea
 
 dashboard/node_modules
+dashboard/.vscode
