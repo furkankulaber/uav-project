@@ -15,8 +15,37 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from django.urls import path, include
+from rest_framework import routers
+from rest_framework.permissions import AllowAny
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+from core.views import DroneViewSet,BookingViewSet, UserInfoView
+
+router = routers.DefaultRouter()
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="UAV Rental API Documentation",
+        default_version='v1',
+        license=openapi.License(name="BSD License"),
+    ),
+    public=True,
+    permission_classes=(AllowAny,),
+)
+
+
+router.register(r'api/drones', DroneViewSet, basename='drone')
+router.register(r'api/bookings', BookingViewSet, basename='booking')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('', include(router.urls)),  # Burası değişti
+    path('api/user-info/', UserInfoView.as_view(), name='user-info'),
+    path('api/drones/available_drones/', DroneViewSet.as_view({'get': 'available_drones'}), name='available-drones'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

@@ -1,4 +1,4 @@
-# core/models/category.py
+# cores/models/category.py
 
 from django.db import models
 

@@ -1,4 +1,4 @@
-# core/models/brand.py
+# cores/models/brand.py
 
 from django.db import models
 

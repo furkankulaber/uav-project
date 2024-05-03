@@ -1,0 +1,472 @@
+[
+  {
+    "model": "core.brand",
+    "pk": 1,
+    "fields": {
+      "name": "Baykar"
+    }
+  },
+  {
+    "model": "core.brand",
+    "pk": 2,
+    "fields": {
+      "name": "DJI"
+    }
+  },
+  {
+    "model": "core.brand",
+    "pk": 3,
+    "fields": {
+      "name": "XYZ Brand"
+    }
+  },
+  {
+    "model": "core.brand",
+    "pk": 4,
+    "fields": {
+      "name": "ABC Drone Co."
+    }
+  },
+  {
+    "model": "core.brand",
+    "pk": 5,
+    "fields": {
+      "name": "TechDrone"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "name": "Savunma"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "name": "Endüstriyel"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "name": "Tarım"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 4,
+    "fields": {
+      "name": "Taşımacılık"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {
+      "name": "Eğlence"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 1,
+    "fields": {
+      "brand": 1,
+      "model": "Bayraktar TB2",
+      "weight": 650.00,
+      "price": 1000.00,
+      "currency": "TRY",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 2,
+    "fields": {
+      "brand": 1,
+      "model": "Akıncı",
+      "weight": 500.00,
+      "price": 2500.00,
+      "currency": "TRY",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 3,
+    "fields": {
+      "brand": 2,
+      "model": "Mavic Air 2",
+      "weight": 420.00,
+      "price": 1500.00,
+      "currency": "USD",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 4,
+    "fields": {
+      "brand": 2,
+      "model": "Phantom 4 Pro",
+      "weight": 1388.00,
+      "price": 2500.00,
+      "currency": "USD",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 5,
+    "fields": {
+      "brand": 3,
+      "model": "FalconX",
+      "weight": 780.00,
+      "price": 2000.00,
+      "currency": "EUR",
+      "category": 2,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 6,
+    "fields": {
+      "brand": 3,
+      "model": "TurboX",
+      "weight": 900.00,
+      "price": 3500.00,
+      "currency": "EUR",
+      "category": 2,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 7,
+    "fields": {
+      "brand": 4,
+      "model": "ABC-2000",
+      "weight": 1500.00,
+      "price": 2800.00,
+      "currency": "USD",
+      "category": 3,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 8,
+    "fields": {
+      "brand": 4,
+      "model": "XYZ-3000",
+      "weight": 2000.00,
+      "price": 4000.00,
+      "currency": "USD",
+      "category": 3,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+    {
+    "model": "core.drone",
+    "pk": 9,
+    "fields": {
+      "brand": 5,
+      "model": "TechDrone X1",
+      "weight": 550.00,
+      "price": 1800.00,
+      "currency": "EUR",
+      "category": 4,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 10,
+    "fields": {
+      "brand": 5,
+      "model": "TechDrone X2",
+      "weight": 700.00,
+      "price": 2200.00,
+      "currency": "EUR",
+      "category": 4,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+    {
+    "model": "core.drone",
+    "pk": 11,
+    "fields": {
+      "brand": 1,
+      "model": "Bayraktar Akıncı",
+      "weight": 900.00,
+      "price": 3500.00,
+      "currency": "TRY",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 12,
+    "fields": {
+      "brand": 2,
+      "model": "DJI Mavic 3",
+      "weight": 600.00,
+      "price": 2800.00,
+      "currency": "USD",
+      "category": 2,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 13,
+    "fields": {
+      "brand": 3,
+      "model": "XYZ Brand Alpha",
+      "weight": 750.00,
+      "price": 2000.00,
+      "currency": "EUR",
+      "category": 3,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 14,
+    "fields": {
+      "brand": 4,
+      "model": "ABC Drone Co. Delta",
+      "weight": 850.00,
+      "price": 3200.00,
+      "currency": "USD",
+      "category": 4,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 15,
+    "fields": {
+      "brand": 5,
+      "model": "TechDrone DeltaX",
+      "weight": 950.00,
+      "price": 2400.00,
+      "currency": "EUR",
+      "category": 5,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+    {
+    "model": "core.drone",
+    "pk": 16,
+    "fields": {
+      "brand": 1,
+      "model": "Baykar TB3",
+      "weight": 720.00,
+      "price": 3100.00,
+      "currency": "TRY",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 17,
+    "fields": {
+      "brand": 2,
+      "model": "DJI Phantom 5",
+      "weight": 580.00,
+      "price": 3300.00,
+      "currency": "USD",
+      "category": 2,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 18,
+    "fields": {
+      "brand": 3,
+      "model": "XYZ Brand Beta",
+      "weight": 780.00,
+      "price": 2800.00,
+      "currency": "EUR",
+      "category": 3,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 19,
+    "fields": {
+      "brand": 4,
+      "model": "ABC Drone Co. Gamma",
+      "weight": 880.00,
+      "price": 3400.00,
+      "currency": "USD",
+      "category": 4,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 20,
+    "fields": {
+      "brand": 5,
+      "model": "TechDrone Omega",
+      "weight": 950.00,
+      "price": 2900.00,
+      "currency": "EUR",
+      "category": 5,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 21,
+    "fields": {
+      "brand": 1,
+      "model": "Baykar TB4",
+      "weight": 730.00,
+      "price": 3200.00,
+      "currency": "TRY",
+      "category": 1,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 22,
+    "fields": {
+      "brand": 2,
+      "model": "DJI Mavic Air 3",
+      "weight": 620.00,
+      "price": 3500.00,
+      "currency": "USD",
+      "category": 2,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 23,
+    "fields": {
+      "brand": 3,
+      "model": "XYZ Brand Gamma",
+      "weight": 790.00,
+      "price": 2900.00,
+      "currency": "EUR",
+      "category": 3,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 24,
+    "fields": {
+      "brand": 4,
+      "model": "ABC Drone Co. Omega",
+      "weight": 890.00,
+      "price": 3500.00,
+      "currency": "USD",
+      "category": 4,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.drone",
+    "pk": 25,
+    "fields": {
+      "brand": 5,
+      "model": "TechDrone Sigma",
+      "weight": 960.00,
+      "price": 3000.00,
+      "currency": "EUR",
+      "category": 5,
+      "status": "Available",
+      "created_at": "2024-05-12T12:00:00Z",
+      "updated_at": "2024-05-12T12:00:00Z"
+    }
+  },
+  {
+  "model": "core.customuser",
+  "pk": 1,
+  "fields": {
+    "username": "admin",
+    "email": "admin@example.com",
+    "password": "pbkdf2_sha256$600000$QehazL2lDBKF9pW8Wpfc3j$U2emOsMN5+0vUrsar9pNYtdP6D9WM1xVv+2ibL56n00=",
+    "is_superuser": true,
+    "is_staff": true,
+    "is_active": true
+  }
+},
+{
+  "model": "core.customuser",
+  "pk": 2,
+  "fields": {
+    "username": "customer",
+    "email": "customer@example.com",
+    "password": "pbkdf2_sha256$600000$QehazL2lDBKF9pW8Wpfc3j$U2emOsMN5+0vUrsar9pNYtdP6D9WM1xVv+2ibL56n00=",
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true
+  }
+}
+
+]
